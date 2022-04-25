@@ -19,14 +19,12 @@ public abstract class BaseActivity: AppCompatActivity() {
     }
 
     protected abstract fun onHandleMessage(msg: Message)
-
     private lateinit var mHandler: Handler
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mHandler = MainHandler(this)
     }
-
 
 
 }

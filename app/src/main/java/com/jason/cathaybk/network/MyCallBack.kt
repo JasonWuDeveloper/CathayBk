@@ -4,6 +4,7 @@ import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
+
 interface MyCallBack<T> : Callback<T> {
     override fun onFailure(call: Call<T>?, t: Throwable?) {
         handleConnectFailure()

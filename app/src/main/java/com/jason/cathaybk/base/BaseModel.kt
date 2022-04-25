@@ -5,9 +5,10 @@ import com.google.gson.Gson
 import com.jason.cathaybk.network.NetworkManager
 
 abstract class BaseModel {
-    val mContext:Context? = null
+    var appConText:Context? = null
+    val mContext:Context = appConText!!
     var gson = Gson()
-    val networkManager = mContext?.let { NetworkManager.getInstance(it) }
+    val networkManager =NetworkManager.getInstance(mContext)
 
     companion object {
         const val ERROR_OPERATION_FAILED = "network operation failed"

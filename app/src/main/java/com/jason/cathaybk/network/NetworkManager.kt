@@ -43,15 +43,7 @@ class NetworkManager private constructor(context: Context) {
 
     }
 
-    fun getErrorId(resourceName: String, c: Class<*>): Int {
-        try {
-            val idField = c.getDeclaredField(resourceName)
-            return idField.getInt(idField)
-        } catch (e: Exception) {
-            throw RuntimeException("No resource ID found for: $resourceName / $c", e)
-        }
 
-    }
 
     companion object {
 
